@@ -1,0 +1,63 @@
+@maincolor: #384997;
+@huemaincolor: #4758a5;
+@whitecolor: #fff;
+
+
+html {
+  	font-size: 10px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 980px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body{
+    margin: 0;
+    font-family: "PT Sans","Arial", sans-serif;
+    font-size: 1.7rem;
+}
+
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 22px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+ul{
+   line-height: 1.6;
+}
+
+@import "blocks/main-container.less";
+@import "blocks/title.less";
+@import "blocks/link.less";
+@import "blocks/header.less";
+@import "blocks/schedule.less";
+@import "blocks/form.less";
+@import "blocks/search.less";
+@import "blocks/contact.less";
+@import "blocks/menu.less";
+@import "blocks/page.less";
+@import "blocks/sidebar.less";
+@import "blocks/section.less";
+@import "blocks/icon.less";
+@import "blocks/document.less";
+@import "blocks/footer.less";
