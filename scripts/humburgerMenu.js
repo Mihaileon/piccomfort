@@ -1,6 +1,6 @@
 (function ($) {
 	$ (function(){
-		$('.menu__humburger').on('click',function(){			
+		$('.menu__button').on('click',function(){			
 			$(this).closest('.menu').toggleClass('menu_active');
 		});
 		$('.menu__item').on('click',function(){			
