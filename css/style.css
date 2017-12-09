@@ -186,6 +186,11 @@ ul {
   padding: 1rem 1.5rem 1rem 4.5rem;
   font-size: 1.5rem;
   width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: 1px solid #b9b9bb;
+  color: #b9b9bb;
 }
 .form__button {
   background-color: #384997;
