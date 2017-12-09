@@ -31,19 +31,19 @@
 						<span class="form__hint">Не можете что-то найти? Введите запрос</span>
 						<div class="form__container search__icon">
 							<input class="form__input search__input" type="search" name="search" placeholder="Например, погасить задолженность по ЖКХ в рассрочку" required>
-							<button class="search__button button"></button>	
+							<button class="search__button"></button>	
 						</div>
 					</label>		
 				</form>
 				<div class="header__contact contact">
-					<a class="contact__item contact__item_strong contact__phone-icon icon link" href="#">8 (8412) 450-054</a>
-					<a class="contact__item contact__location-icon icon link" href="#">г. Пенза, ул. Карла Маркса, дом 5А, офис 309</a>
-					<a class="contact__item contact__mail-icon icon link" href="#">info@klychniki.ru</a>
+					<a class="contact__item contact__phone icon link" href="#">8 (8412) 450-054</a>
+					<a class="contact__item contact__location icon link" href="#">г. Пенза, ул. Карла Маркса, дом 5А, офис 309</a>
+					<a class="contact__item contact__mail icon link" href="#">info@klychniki.ru</a>
 				</div>	
 			</div>				 		
 		</header>
 		<nav class="menu">
-			<button	class="menu__button button">МЕНЮ</button>
+			<button	class="menu__button"></button>
 			<ul class="main-container menu__list">
 				<li class="menu__list-item">
 					<a class="menu__item link" href="#">Документы</a>
@@ -114,13 +114,13 @@
 								<label class="form__label sidebar__label">
 									<span class="form__hint">Введите ваше ФИО</span>
 									<div class="form__container form__name-icon">
-										<input class="form__input" name="name" type="search" placeholder="Например, Иванов Иван Иваныч" required>
+										<input class="form__input" name="name" type="text" placeholder="Например, Иванов Иван Иваныч" required>
 									</div>	
 								</label>
 								<label class="form__label sidebar__label">
 									<span class="form__hint">Выберите дату приема</span>
 									<div class="form__container form__data-icon">
-										<input class="form__input" name="data" type="search" placeholder="Например, 23 января" required>
+										<input class="form__input" name="data" type="datetime" placeholder="Например, 23 января" required>
 									</div>	
 								</label>
 								<button class="form__button sidebar__button" type="submit">ЗАПИСАТЬСЯ</button>
@@ -141,48 +141,50 @@
 				</aside>
 			</div>								 		
 		</div>
-		<section class="section page__last-news main-container">
-			<header class="section__header">
-				<h3 class="section__title title title_l">Последние новости</h3>
-			</header>
-			<div class="section__content section__last-news">
-				<article class="last-news__item">
-					<a class="last-news__link link" href="#">
-						<div class="last-news__data">
-							<span class="last-news__day">11</span>
-							<span class="last-news__month">янв</span>
-						</div>
-						<div class="last-news__content">
-							<span class="last-news__year">2017</span>
-							<h3 class="last-news__title title title_m">Новогодняя ёлка в ЖК «Арбековская застава»</h3>
-						</div>
-					</a>
-				</article>
-				<article class="last-news__item">
-					<a class="last-news__link link" href="#">
-						<div class="last-news__data">
-							<span class="last-news__day">9</span>
-							<span class="last-news__month">янв</span>
-						</div>
-						<div class="last-news__content">
-							<span class="last-news__year">2017</span>
-							<h3 class="last-news__title title title_m">Научное шоу в ЖК «Арбековская застава»</h3>
-						</div>
-					</a>
-				</article>
-				<article class="last-news__item">
-					<a class="last-news__link link" href="#">
-						<div class="last-news__data">
-							<span class="last-news__day">5</span>
-							<span class="last-news__month">янв</span>
-						</div>
-						<div class="last-news__content">
-							<span class="last-news__year">2017</span>
-							<h3 class="last-news__title title title_m">Веселые каникулы «Арбековской заставы»</h3>
-						</div>
-					</a>
-				</article>
-			</div>							
+		<section class="section page__last-news last-news">
+			<div class="main-container">
+				<header class="section__header">
+					<h3 class="section__title title title_l">Последние новости</h3>
+				</header>
+				<div class="section__content last-news__content">
+					<article class="last-news__item news">
+						<a class="news__link link" href="#">
+							<div class="news__data">
+								<span class="news__day">11</span>
+								<span class="news__month">янв</span>
+							</div>
+							<div class="news__content">
+								<span class="news__year">2017</span>
+								<h3 class="news__title title title_m">Новогодняя ёлка в ЖК «Арбековская застава»</h3>
+							</div>
+						</a>
+					</article>
+					<article class="last-news__item news">
+						<a class="news__link news__ link" href="#">
+							<div class="news__data">
+								<span class="news__day">9</span>
+								<span class="news__month">янв</span>
+							</div>
+							<div class="news__content">
+								<span class="news__year">2017</span>
+								<h3 class="news__title title title_m">Научное шоу в ЖК «Арбековская застава»</h3>
+							</div>
+						</a>
+					</article>
+					<article class="last-news__item news">
+						<a class="news__link link" href="#">
+							<div class="news__data">
+								<span class="news__day">5</span>
+								<span class="news__month">янв</span>
+							</div>
+							<div class="news__content">
+								<span class="news__year">2017</span>
+								<h3 class="news__title title title_m">Веселые каникулы «Арбековской заставы»</h3>
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>								
 		</section>
 		<footer class="footer">
 			<div class="footer__container main-container">
@@ -224,7 +226,8 @@
 							<span class="footer__value">044583503</span>
 						</div>
 					</div>
-				</div>				
+				</div>
+				<span class="footer__copyright">© ООО "ПИК-Комфорт", 2011-2017</span>				
 			</div>
 		</footer>
 	</div>		
