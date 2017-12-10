@@ -5,6 +5,8 @@
 .menu__list{
  	margin-top: 0;
  	margin-bottom: 0;
+    display: flex;
+    list-style-type: none;
 }
 .menu__button{
     background: none;
@@ -26,9 +28,6 @@
 @media screen and (min-width: 700px) {
 	.menu__button{
     	display: none;
-	}
-	.menu__list-item{
-		display: inline-block;
 	}
 	.menu__list-item:hover{
 		background-color: @huemaincolor;
@@ -59,4 +58,17 @@
     	padding: 3rem 0;
     	display: block;
     }
+}
+.menu__list-item_active{
+    position: relative;
+    background-color: @huemaincolor;
+}
+.menu__list-item_active:after{
+      content:"";
+      position: absolute;
+      height: 2px;
+      width:100%;
+      border-top: 2px solid #fff;
+      border-radius: 2px;
+      bottom: -2px; 
 }

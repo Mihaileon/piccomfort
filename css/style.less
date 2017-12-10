@@ -1,12 +1,13 @@
 @maincolor: #384997;
 @huemaincolor: #4758a5;
 @whitecolor: #fff;
+@blackcolor: #000;
 
-
-html {
+@media screen and (min-width: 971px){
+  html {
   	font-size: 10px;
+  }
 }
-
 @media screen and (min-width: 700px) and (max-width: 970px) {
   html {
     font-size: 9px;
@@ -38,8 +39,8 @@ h4 {
   font-size: 22px;
 }
 p {
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   line-height: 1.6;
 }
 ul{
@@ -62,4 +63,5 @@ ul{
 @import "blocks/document.less";
 @import "blocks/last-news.less";
 @import "blocks/news.less";
+@import "blocks/breadcrumb.less";
 @import "blocks/footer.less";
