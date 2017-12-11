@@ -4,21 +4,38 @@
 .breadcrumb__list{
 	margin-top: 0;
 	margin-bottom: 0;
+	display: flex;
 }
 
 .breadcrumb__list-item{
 	display: inline-block;
 	color: @huemaincolor;
 	font-size: 1.5rem;
-	margin-right: 3rem;
+	margin-right: 1rem;
+	position: relative;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
 }
 .breadcrumb__list-item:last-of-type{
 	color: @blackcolor;
 	font-weight: bold;
+	margin-right: 0;
 }
 
 .breadcrumb__link{
-	padding: 0.8rem; 
+	padding-right: 2rem; 
 	color: inherit;
 	font-weight: inherit;
+	position: relative;
+}
+.breadcrumb__link:after{
+	content:">";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%) scaleY(1.4)	;
+	color: #000;
+}
+
+.breadcrumb__name-page{
 }

@@ -1,25 +1,16 @@
 
-.contact__item{
+.contact__link{
 	color: #000;
-	font-size: 1.5rem;
-	padding-left: 2.6rem;
 }
-
-.contact__phone{
-	font-weight: bold;
+.contact__phone-link{
 	font-size: 2rem;
-	background-image: url(../img/icon_phone.svg);
-}
-.contact__location{
-	background-image: url(../img/icon_location.svg);
-}
-.contact__mail{
-	background-image: url(../img/icon_email.svg);
+	font-weight: bold;
 }
 
-@media screen and (mim-width: 800px){
+
+@media screen and (min-width: 800px){
 .contact__item{
-	margin-top: 5px;
+	margin-top: 0.3rem;
 }
 .contact__item:first-of-type{
 	margin-top: 0;
@@ -32,9 +23,9 @@
 	}
 
 	.contact__item:first-of-type{
-	margin-left: 0;
-}
-	.contact__location{
-		display: none;
+		margin-left: 0;
 	}
+	.contact__item:nth-child(2){
+		display: none;
+}
 }
