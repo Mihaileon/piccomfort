@@ -1,7 +1,27 @@
 .object__item{
-	width: 30%;
+	position: relative;
+	color: #000;
+	font-size: 2rem;
+	font-weight: bold;
 }
+.object__picture:before{
+    content: "";
+    position: relative;
+    display: block;
+    padding-left: 100%;
+    padding-top: 67%;
+}
+
 .object__img{
 	display: block;
-	max-width: 100%;
+    max-width: 100%;
+	border-radius: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.object__address{
+	display: block;
+	margin-top: 1rem;
+	padding-left: 0.5rem;
 }

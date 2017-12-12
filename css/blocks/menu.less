@@ -1,67 +1,119 @@
-.menu{
-	background-color: @maincolor;
-	position: relative;
-}
 .menu__list{
- 	margin-top: 0;
- 	margin-bottom: 0;
+  	margin-top: 0;
+ 	  margin-bottom: 0;
     display: flex;
     list-style-type: none;
 }
 .menu__button{
     background: none;
-    border: none;
-	position: relative;
-	cursor: pointer;
-    color: @whitecolor;
+    position: relative;
+	  cursor: pointer;
     font-size: 2.3rem;
+    border: none;
+    width: 34px;
+  }
+
+.menu__button-element{
+    position: absolute;
+    height: 4px;
     width: 100%;
+    background-color: @maincolor;
+    border-radius: 4px;
+    transition: transform .3s ease-in-out, opacity .25s ease-in-out;
 }
-.menu__item{
-	color: @whitecolor;
+
+.menu.menu_active{
+    height: 6vh;
+    background-color: @maincolor;
+}
+.menu.menu_active .menu__button .menu__button-element{
+    background-color: @whitecolor;   
+}
+
+.menu__button-element:nth-child(1){
+  top:0;
+}
+
+.menu__button-element:nth-child(2), .menu__button-element:nth-child(3){
+  top:10px;
+}
+
+.menu__button-element:nth-child(4){
+  top: 20px;
+}
+
+.menu.menu_active .menu__button .menu__button-element:nth-child(1){
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.menu.menu_active .menu__button .menu__button-element:nth-child(2){
+  transform: rotate(135deg);
+}
+
+.menu.menu_active .menu__button .menu__button-element:nth-child(3){
+  transform: rotate(-135deg);
+}
+
+.menu.menu_active .menu__button .menu__button-element:nth-child(4){
+  transform: translateY(-10px) rotate(135deg);
 }
 
 .menu.menu_active .menu__list{
-  display: block;
+    display: block;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 730px) {
+  .menu{
+    background-color: @maincolor;
+  }
 	.menu__button{
     	display: none;
 	}
 	.menu__list-item:hover{
-		background-color: @huemaincolor;
+		  background-color: @huemaincolor;
 	}
 	.menu__item{
-		padding: 10px 15px;
+		  padding: 10px 15px;
 }
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 729px) {
+    .menu{
+      position: relative;
+      order: -1;
+      background-color: transparent;
+      flex-shrink: 0;
+    }
     .menu__list{
-    	position: absolute;
-        display: none;
-        z-index: 1000;
-        width: 100%;
-        padding: 0;
+    	display: none;
+      z-index: 1000;
+      position: absolute;
+      right: 0;
+      top: 6vh;
+      width: 100%;
+      padding: 0;
     }
     .menu__list-item{
-    	display: block;
-    	background-color: @maincolor;
-    	text-align: center;
-    	border: 1px solid @huemaincolor;
+      	display: block;
+      	background-color: @maincolor;
+      	text-align: center;
+      	border: 1px solid @huemaincolor;
     }
     .menu__list-item:first-of-type{
-    	border-top: 0;
+    	  border-top: 0;
     }
     .menu__item{
-    	padding: 3rem 0;
-    	display: block;
+      	padding: 3rem 0;
+      	display: block;
     }
 }
+
+.menu__item{
+    color: @whitecolor;
+}
 .menu__list-item_active{
-    position: relative;
-    background-color: @huemaincolor;
+      position: relative;
+      background-color: @huemaincolor;
 }
 .menu__list-item_active:after{
       content:"";
