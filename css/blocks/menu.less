@@ -1,126 +1,94 @@
 .menu__list{
   	margin-top: 0;
- 	  margin-bottom: 0;
+ 	margin-bottom: 0;
     display: flex;
     list-style-type: none;
 }
-.menu__button{
-    background: none;
-    position: relative;
-	  cursor: pointer;
-    font-size: 2.3rem;
-    border: none;
-    width: 34px;
-  }
-
-.menu__button-element{
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background-color: @maincolor;
-    border-radius: 4px;
-    transition: transform .3s ease-in-out, opacity .25s ease-in-out;
-}
-
-.menu.menu_active{
-    height: 6vh;
+.menu{
     background-color: @maincolor;
 }
-.menu.menu_active .menu__button .menu__button-element{
-    background-color: @whitecolor;   
-}
 
-.menu__button-element:nth-child(1){
-  top:0;
-}
-
-.menu__button-element:nth-child(2), .menu__button-element:nth-child(3){
-  top:10px;
-}
-
-.menu__button-element:nth-child(4){
-  top: 20px;
-}
-
-.menu.menu_active .menu__button .menu__button-element:nth-child(1){
-  transform: translateY(10px) rotate(-45deg);
-}
-
-.menu.menu_active .menu__button .menu__button-element:nth-child(2){
-  transform: rotate(135deg);
-}
-
-.menu.menu_active .menu__button .menu__button-element:nth-child(3){
-  transform: rotate(-135deg);
-}
-
-.menu.menu_active .menu__button .menu__button-element:nth-child(4){
-  transform: translateY(-10px) rotate(135deg);
-}
-
-.menu.menu_active .menu__list{
-    display: block;
-}
-
-@media screen and (min-width: 730px) {
-  .menu{
-    background-color: @maincolor;
-  }
-	.menu__button{
-    	display: none;
+.menu__list-item:hover{
+	background-color: @huemaincolor;
 	}
-	.menu__list-item:hover{
-		  background-color: @huemaincolor;
-	}
-	.menu__item{
-		  padding: 10px 15px;
-}
+.menu__item{
+	padding: 10px 15px;
+    color: @whitecolor;
+
 }
 
-@media screen and (max-width: 729px) {
+@media screen and (min-width: 730px){
+    .menu__button{
+        display: none;
+    }
+    .menu__list-item_active{
+          position: relative;
+          background-color: @huemaincolor;
+    }
+    .menu__list-item_active:after{
+          content:"";
+          position: absolute;
+          height: 2px;
+          width:100%;
+          border-top: 2px solid #fff;
+          border-radius: 2px;
+          bottom: -2px; 
+    }
+}
+@media screen and (max-width: 729px){
     .menu{
-      position: relative;
-      order: -1;
-      background-color: transparent;
-      flex-shrink: 0;
+        position: relative;
+        background-color: #fff;
+}
+    .menu__button{
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        width: 28px;
+        height: 22px;
+        background-color: #fff;
+        left: 84%;
+    }
+    .menu__button-el{
+        background-color: @maincolor;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        left: 0;
+        transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+    }
+    .menu__button-el:nth-child(1){
+        top:2px;
+    }
+    .menu__button-el:nth-child(2),.menu__burger-element:nth-child(3){
+        top: 11px;
+    }
+    .menu__button-el:nth-child(4){
+        top: 20px;
+    }
+    .menu__button-el_active.menu__button-el:nth-child(1){
+        opacity: 0;
+    }
+    .menu__button-el_active.menu__button-el:nth-child(2){
+        transform: rotate(-45deg);
+    }
+    .menu__button-el_active.menu__button-el:nth-child(3){
+        transform: rotate(45deg);
+    }
+    .menu__button-el_active.menu__button-el:nth-child(4){
+        opacity: 0;
     }
     .menu__list{
-    	display: none;
-      z-index: 1000;
-      position: absolute;
-      right: 0;
-      top: 6vh;
-      width: 100%;
-      padding: 0;
+        display: none;
     }
-    .menu__list-item{
-      	display: block;
-      	background-color: @maincolor;
-      	text-align: center;
-      	border: 1px solid @huemaincolor;
-    }
-    .menu__list-item:first-of-type{
-    	  border-top: 0;
-    }
-    .menu__item{
-      	padding: 3rem 0;
-      	display: block;
+    .menu__list.menu__list_active{
+        background: @maincolor;
+        display: block;
+        text-align: center;
+        z-index: 9999;
+        margin-top: 10px;
     }
 }
 
-.menu__item{
-    color: @whitecolor;
-}
-.menu__list-item_active{
-      position: relative;
-      background-color: @huemaincolor;
-}
-.menu__list-item_active:after{
-      content:"";
-      position: absolute;
-      height: 2px;
-      width:100%;
-      border-top: 2px solid #fff;
-      border-radius: 2px;
-      bottom: -2px; 
-}
