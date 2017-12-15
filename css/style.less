@@ -5,18 +5,18 @@
 
 @media screen and (min-width: 971px){
   html {
-  	font-size: 10px;
+  	font-size: 62.5%;;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 970px) {
+@media screen and (min-width: 730px) and (max-width: 970px) {
   html {
-    font-size: 9px;
+    font-size: 53%;
   }
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 729px) {
   html {
-    font-size: 8px;
+    font-size: 48%;
   }
 }
 
@@ -24,6 +24,7 @@ body{
     margin: 0;
     font-family: "PT Sans","Arial", sans-serif;
     font-size: 1.7rem;
+    color: #000;
 }
 
 h1 {
@@ -39,27 +40,35 @@ h4 {
   font-size: 22px;
 }
 p {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
+p:last-child{
+  margin-bottom: 0;
+}
 ul{
+   margin-top: 0;
+   margin-bottom: 1.5rem;
    line-height: 1.6;
+}
+ul:last-child{
+  margin-bottom: 0;
 }
 
 @import "blocks/main-container.less";
 @import "blocks/title.less";
 @import "blocks/link.less";
-@import "blocks/info.less";
 @import "blocks/header.less";
 @import "blocks/schedule.less";
 @import "blocks/form.less";
 @import "blocks/search.less";
-@import "blocks/contact.less";
+@import "blocks/contacts.less";
 @import "blocks/menu.less";
 @import "blocks/page.less";
 @import "blocks/sidebar.less";
 @import "blocks/section.less";
+@import "blocks/iconbox.less";
 @import "blocks/icon.less";
 @import "blocks/document.less";
 @import "blocks/news.less";
@@ -67,3 +76,4 @@ ul{
 @import "blocks/object.less";
 @import "blocks/pagination.less";
 @import "blocks/footer.less";
+@import "blocks/pikaday.less";

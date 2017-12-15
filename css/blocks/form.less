@@ -1,14 +1,10 @@
 .form__label{
 	display: block;
-	position: relative;
-}
-.form__hint{
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
 	font-weight: bold;
-	display: block;
+	cursor: pointer;
 }
-
 .form__container{
 	position: relative;
 }
@@ -20,8 +16,9 @@
 	width: 100%;
 	box-shadow: none;
 	border-radius: 0;
+	text-overflow: ellipsis;
 	border: 1px solid #b9b9bb;
-	color: #b9b9bb
+	color: @blackcolor;
 }
 .form__button{
 	background-color: @maincolor;

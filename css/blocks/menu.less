@@ -18,7 +18,7 @@
 }
 
 @media screen and (min-width: 730px){
-    .menu__button{
+    .burger{
         display: none;
     }
     .menu__list-item_active{
@@ -29,7 +29,7 @@
           content:"";
           position: absolute;
           height: 2px;
-          width:100%;
+          width: 100%;
           border-top: 2px solid #fff;
           border-radius: 2px;
           bottom: -2px; 
@@ -37,20 +37,21 @@
 }
 @media screen and (max-width: 729px){
     .menu{
-        position: relative;
         background-color: #fff;
+        position: relative;
 }
-    .menu__button{
+    .burger{
+        position: absolute;
         border: none;
         font-size: 2rem;
         cursor: pointer;
-        position: relative;
         width: 28px;
         height: 22px;
         background-color: #fff;
-        left: 84%;
+        right: 20px;
+        top: 30px;
     }
-    .menu__button-el{
+    .burger__el{
         background-color: @maincolor;
         position: absolute;
         height: 4px;
@@ -59,25 +60,25 @@
         left: 0;
         transition: transform .25s ease-in-out, opacity .25s ease-in-out;
     }
-    .menu__button-el:nth-child(1){
-        top:2px;
+    .burger__el:nth-child(1){
+        top: 2px;
     }
-    .menu__button-el:nth-child(2),.menu__burger-element:nth-child(3){
+    .burger__el:nth-child(2),.menu__burger-element:nth-child(3){
         top: 11px;
     }
-    .menu__button-el:nth-child(4){
+    .burger__el:nth-child(4){
         top: 20px;
     }
-    .menu__button-el_active.menu__button-el:nth-child(1){
+    .burger__el_active.burger__el:nth-child(1){
         opacity: 0;
     }
-    .menu__button-el_active.menu__button-el:nth-child(2){
+    .burger__el_active.burger__el:nth-child(2){
         transform: rotate(-45deg);
     }
-    .menu__button-el_active.menu__button-el:nth-child(3){
+    .burger__el_active.burger__el:nth-child(3){
         transform: rotate(45deg);
     }
-    .menu__button-el_active.menu__button-el:nth-child(4){
+    .burger__el_active.burger__el:nth-child(4){
         opacity: 0;
     }
     .menu__list{
@@ -89,6 +90,10 @@
         text-align: center;
         z-index: 9999;
         margin-top: 10px;
+        position: absolute;
+        width: 100%;
+        top: -138px;
+        box-sizing: border-box;
     }
 }
 
